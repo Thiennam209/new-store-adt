@@ -36,42 +36,111 @@ namespace My.Function
                     new Uri(adtServiceUrl), credentials, new DigitalTwinsClientOptions
                     { Transport = new HttpClientTransport(httpClient) });
                 log.LogInformation($"ADT service client connection created.");
-                
+
                 if (eventGridEvent != null && eventGridEvent.Data != null)
                 {
 
                     JObject deviceMessage = (JObject)JsonConvert.DeserializeObject(eventGridEvent.Data.ToString());
                     string deviceId = (string)deviceMessage["systemProperties"]["iothub-connection-device-id"];
-                    var ID = deviceMessage["body"]["TurbineID"];
+                    var ID = deviceMessage["body"]["storeid"];
                     var TimeInterval = deviceMessage["body"]["TimeInterval"];
-                    var Description = deviceMessage["body"]["Description"];
-                    var Code = deviceMessage["body"]["Code"];
-                    var WindSpeed = deviceMessage["body"]["WindSpeed"];
-                    var Ambient = deviceMessage["body"]["Ambient"];
-                    var Rotor = deviceMessage["body"]["Rotor"];
-                    var Power = deviceMessage["body"]["Power"];
+                    var ProductName = deviceMessage["body"]["ProductName"];
+                    var ProductSellingRank = deviceMessage["body"]["ProductSellingRank"];
+                    var SoldProductQuantity = deviceMessage["body"]["SoldProductQuantity"];
+                    var RemainProductQuantity = deviceMessage["body"]["RemainProductQuantity"];
+                    var ProductPrice = deviceMessage["body"]["ProductPrice"];
+                    var ProductCost = deviceMessage["body"]["ProductCost"];
+                    var ProductDiscount = deviceMessage["body"]["ProductDiscount"];
+                    var ProductProfitPerItem = deviceMessage["body"]["ProductProfitPerItem"];
+                    var ProductProfitPercentagePerItem = deviceMessage["body"]["ProductProfitPercentagePerItem"];
+                    var ProductImageURL = deviceMessage["body"]["ProductImageURL"];
+                    var CustomerQuantityLastHour = deviceMessage["body"]["CustomerQuantityLastHour"];
+                    var CustomerQuantityLastDay = deviceMessage["body"]["CustomerQuantityLastDay"];
+                    var CustomerQuantityTotal = deviceMessage["body"]["CustomerQuantityTotal"];
+                    var ShelfProductNames = deviceMessage["body"]["ShelfProductNames"];
+                    var ShelfItemQuantity = deviceMessage["body"]["ShelfItemQuantity"];
+                    var ShelfRevenueLastHour = deviceMessage["body"]["ShelfRevenueLastHour"];
+                    var ShelfRevenueLastDay = deviceMessage["body"]["ShelfRevenueLastDay"];
+                    var ShelfRevenueTotal = deviceMessage["body"]["ShelfRevenueTotal"];
+                    var ShelfSoldItemQuantityLastHour = deviceMessage["body"]["ShelfSoldItemQuantityLastHour"];
+                    var ShelfSoldItemQuantityLastDay = deviceMessage["body"]["ShelfSoldItemQuantityLastDay"];
+                    var ShelfSoldItemQuantityTotal = deviceMessage["body"]["ShelfSoldItemQuantityTotal"];
+                    var ShelfCostPerItem = deviceMessage["body"]["ShelfCostPerItem"];
+                    var ShelfPricePerItem = deviceMessage["body"]["ShelfPricePerItem"];
+                    var ConversionRateLastHour = deviceMessage["body"]["ConversionRateLastHour"];
+                    var ConversionRateLastDay = deviceMessage["body"]["ConversionRateLastDay"];
+                    var ConversionRateTotal = deviceMessage["body"]["ConversionRateTotal"];
+                    var ShelfProfitLastHour = deviceMessage["body"]["ShelfProfitLastHour"];
+                    var ShelfProfitLastDay = deviceMessage["body"]["ShelfProfitLastDay"];
+                    var ShelfProfitTotal = deviceMessage["body"]["ShelfProfitTotal"];
 
                     log.LogInformation($"Device:{deviceId} Device Id is:{ID}");
                     log.LogInformation($"Device:{deviceId} Time interval is:{TimeInterval}");
-                    log.LogInformation($"Device:{deviceId} Description is:{Description}");
-                    log.LogInformation($"Device:{deviceId} CodeNumber is:{Code}");
-                    log.LogInformation($"Device:{deviceId} WindSpeed is:{WindSpeed}");
-                    log.LogInformation($"Device:{deviceId} Ambient Temperature is:{Ambient}");
-                    log.LogInformation($"Device:{deviceId} Rotor RPM is:{Rotor}");
-                    log.LogInformation($"Device:{deviceId} Power is:{Power}");
+                    log.LogInformation($"Device: {deviceId} ProductName is: {ProductName}");
+                    log.LogInformation($"Device: {deviceId} ProductSellingRank is: {ProductSellingRank}");
+                    log.LogInformation($"Device: {deviceId} SoldProductQuantity: {SoldProductQuantity}");
+                    log.LogInformation($"Device: {deviceId} RemainProductQuantity is: {RemainProductQuantity}");
+                    log.LogInformation($"Device: {deviceId} ProductPrice is: {ProductPrice}");
+                    log.LogInformation($"Device: {deviceId} ProductCost is: {ProductCost}");
+                    log.LogInformation($"Device: {deviceId} ProductDiscount is: {ProductDiscount}");
+                    log.LogInformation($"Device: {deviceId} ProductProfitPerItem is: {ProductProfitPerItem}");
+                    log.LogInformation($"Device: {deviceId} ProductProfitPercentagePerItem is: {ProductProfitPercentagePerItem}");
+                    log.LogInformation($"Device: {deviceId} ProductImageURL is: {ProductImageURL}");
+                    log.LogInformation($"Device: {deviceId} CustomerQuantityLastHour is: {CustomerQuantityLastHour}");
+                    log.LogInformation($"Device: {deviceId} CustomerQuantityLastDay is: {CustomerQuantityLastDay}");
+                    log.LogInformation($"Device: {deviceId} CustomerQuantityTotal is: {CustomerQuantityTotal}");
+                    log.LogInformation($"Device: {deviceId} ShelfProductNames is: {ShelfProductNames}");
+                    log.LogInformation($"Device: {deviceId} ShelfItemQuantity is: {ShelfItemQuantity}");
+                    log.LogInformation($"Device: {deviceId} ShelfRevenueLastHour is: {ShelfRevenueLastHour}");
+                    log.LogInformation($"Device: {deviceId} ShelfRevenueLastDay is: {ShelfRevenueLastDay}");
+                    log.LogInformation($"Device: {deviceId} ShelfRevenueTotal is: {ShelfRevenueTotal}");
+                    log.LogInformation($"Device: {deviceId} ShelfSoldItemQuantityLastHour is: {ShelfSoldItemQuantityLastHour}");
+                    log.LogInformation($"Device: {deviceId} ShelfSoldItemQuantityLastDay is: {ShelfSoldItemQuantityLastDay}");
+                    log.LogInformation($"Device: {deviceId} ShelfSoldItemQuantityTotal is: {ShelfSoldItemQuantityTotal}");
+                    log.LogInformation($"Device: {deviceId} ShelfCostPerItem is: {ShelfCostPerItem}");
+                    log.LogInformation($"Device: {deviceId} ShelfPricePerItem is: {ShelfPricePerItem}");
+                    log.LogInformation($"Device: {deviceId} ConversionRateLastHour is: {ConversionRateLastHour}");
+                    log.LogInformation($"Device: {deviceId} ConversionRateLastDay is: {ConversionRateLastDay}");
+                    log.LogInformation($"Device: {deviceId} ConversionRateTotal is: {ConversionRateTotal}");
+                    log.LogInformation($"Device: {deviceId} ShelfProfitLastHour is: {ShelfProfitLastHour}");
+                    log.LogInformation($"Device: {deviceId} ShelfProfitLastDay is: {ShelfProfitLastDay}");
+                    log.LogInformation($"Device: {deviceId} ShelfProfitTotal is: {ShelfProfitTotal}");
                     var updateProperty = new JsonPatchDocument();
                     var turbineTelemetry = new Dictionary<string, Object>()
                     {
-                        ["TurbineID"] = ID,
+                        ["storeid"] = ID,
                         ["TimeInterval"] = TimeInterval,
-                        ["Description"] = Description,
-                        ["Code"] = Code,
-                        ["WindSpeed"] = WindSpeed,
-                        ["Ambient"] = Ambient,
-                        ["Rotor"] = Rotor,
-                        ["Power"] = Power
+                        ["ProductName"] = ProductName,
+                        ["ProductSellingRank"] = ProductSellingRank,
+                        ["SoldProductQuantity"] = SoldProductQuantity,
+                        ["RemainProductQuantity"] = RemainProductQuantity,
+                        ["ProductPrice"] = ProductPrice,
+                        ["ProductCost"] = ProductCost,
+                        ["ProductDiscount"] = ProductDiscount,
+                        ["ProductProfitPerItem"] = ProductProfitPerItem,
+                        ["ProductProfitPercentagePerItem"] = ProductProfitPercentagePerItem,
+                        ["ProductImageURL"] = ProductImageURL,
+                        ["CustomerQuantityLastHour"] = CustomerQuantityLastHour,
+                        ["CustomerQuantityLastDay"] = CustomerQuantityLastDay,
+                        ["CustomerQuantityTotal"] = CustomerQuantityTotal,
+                        ["ShelfProductNames"] = ShelfProductNames,
+                        ["ShelfItemQuantity"] = ShelfItemQuantity,
+                        ["ShelfRevenueLastHour"] = ShelfRevenueLastHour,
+                        ["ShelfRevenueLastDay"] = ShelfRevenueLastDay,
+                        ["ShelfRevenueTotal"] = ShelfRevenueTotal,
+                        ["ShelfSoldItemQuantityLastHour"] = ShelfSoldItemQuantityLastHour,
+                        ["ShelfSoldItemQuantityLastDay"] = ShelfSoldItemQuantityLastDay,
+                        ["ShelfSoldItemQuantityTotal"] = ShelfSoldItemQuantityTotal,
+                        ["ShelfCostPerItem"] = ShelfCostPerItem,
+                        ["ShelfPricePerItem"] = ShelfPricePerItem,
+                        ["ConversionRateLastHour"] = ConversionRateLastHour,
+                        ["ConversionRateLastDay"] = ConversionRateLastDay,
+                        ["ConversionRateTotal"] = ConversionRateTotal,
+                        ["ShelfProfitLastHour"] = ShelfProfitLastHour,
+                        ["ShelfProfitLastDay"] = ShelfProfitLastDay,
+                        ["ShelfProfitTotal"] = ShelfProfitTotal
                     };
-                    updateProperty.AppendAdd("/TurbineID", ID.Value<string>());
+                    updateProperty.AppendAdd("/storeid", ID.Value<string>());
 
                     log.LogInformation(updateProperty.ToString());
                     try

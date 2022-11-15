@@ -15,14 +15,37 @@ namespace SignalRFunctions
 {
     public static class SignalRFunctions
     {
-        public static string turbineId;
+        public static string storeid;
         public static string timeInterval;
-        public static string description;
-        public static int code;
-        public static double windSpeed;
-        public static double temperature;
-        public static double rotorRPM;
-        public static double power = 0.0D;
+        public static string ProductName;
+        public static int ProductSellingRank;
+        public static int SoldProductQuantity;
+        public static int RemainProductQuantity;
+        public static float ProductPrice;
+        public static float ProductCost;
+        public static float ProductDiscount;
+        public static float ProductProfitPerItem;
+        public static float ProductProfitPercentagePerItem;
+        public static string ProductImageURL;
+        public static int CustomerQuantityLastHour;
+        public static int CustomerQuantityLastDay;
+        public static int CustomerQuantityTotal;
+        public static string ShelfProductNames;
+        public static int ShelfItemQuantity;
+        public static float ShelfRevenueLastHour;
+        public static float ShelfRevenueLastDay;
+        public static float ShelfRevenueTotal;
+        public static int ShelfSoldItemQuantityLastHour;
+        public static int ShelfSoldItemQuantityLastDay;
+        public static int ShelfSoldItemQuantityTotal;
+        public static float ShelfCostPerItem;
+        public static float ShelfPricePerItem;
+        public static float ConversionRateLastHour;
+        public static float ConversionRateLastDay;
+        public static float ConversionRateTotal;
+        public static float ShelfProfitLastHour;
+        public static float ShelfProfitLastDay;
+        public static float ShelfProfitTotal;
 
         [FunctionName("negotiate")]
         public static SignalRConnectionInfo GetSignalRInfo(
@@ -60,14 +83,14 @@ namespace SignalRFunctions
             {
                 try
                 {
-                    turbineId = eventGridEvent.Subject;
+                    storeid = eventGridEvent.Subject;
                     
                     var data = eventGridData.SelectToken("data");
                     var patch = data.SelectToken("patch");
                    
                     var property = new Dictionary<object, object>
                     {
-                        {"TurbineID", turbineId }
+                        {"storeid", storeid }
                     };
                     return signalRMessages.AddAsync(
                         new SignalRMessage
