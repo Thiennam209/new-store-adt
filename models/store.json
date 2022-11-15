@@ -1,0 +1,118 @@
+{
+  "@id": "dtmi:digitaltwins:Basic:Store;1",
+  "@type": "Interface",
+  "@context": ["dtmi:dtdl:context;2"],
+  "displayName": "Store layout",
+  "description": "Store layout data",
+  "contents": [
+    {
+      "@type": "Property",
+      "name": "storeid",
+      "displayName": "shelfid",
+      "description": "The unique id of the store shelf",
+      "writable": true,
+      "schema": "string"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "timeInterval",
+      "description": "The time interval of this data",
+      "schema": "string"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "CustomerQuantityLastHour",
+      "schema": "integer"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "CustomerQuantityLastDay",
+      "schema": "integer"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "CustomerQuantityTotal",
+      "schema": "integer"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "ShelfProductNames",
+      "schema": "string"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "ShelfItemQuantity",
+      "schema": "integer"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "ShelfRevenueLastHour",
+      "schema": "float"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "ShelfRevenueLastDay",
+      "schema": "float"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "ShelfRevenueTotal",
+      "schema": "float"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "ShelfSoldItemQuantityLastHour",
+      "schema": "integer"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "ShelfSoldItemQuantityLastDay",
+      "schema": "integer"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "ShelfSoldItemQuantityTotal",
+      "schema": "integer"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "ShelfCostPerItem",
+      "schema": "float"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "ShelfPricePerItem",
+      "schema": "float"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "ConversionRateLastHour",
+      "schema": "float"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "ConversionRateLastDay",
+      "schema": "float"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "ConversionRateTotal",
+      "schema": "float"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "ShelfProfitLastHour",
+      "schema": "float"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "ShelfProfitLastDay",
+      "schema": "float"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "ShelfProfitTotal",
+      "schema": "float"
+    }
+  ]
+}

@@ -32,11 +32,18 @@ git clone https://github.com/Thiennam209/new-store-adt
 turbineid=$(az dt model create -n $adtname --models ./new-store-adt/models/turbine.json --query [].id -o tsv)
 
 # echo 'instantiate ADT Instances'
-for i in {98..108}
+for i in {1..8}
 do
-    echo "Create Turbine storeid$i"
-    az dt twin create -n $adtname --dtmi $turbineid --twin-id "storeid$i"
-    az dt twin update -n $adtname --twin-id "storeid$i" --json-patch '[{"op":"add", "path":"/TurbineID", "value": "'"storeid$i"'"}]'
+    echo "Create Turbine shelfid$i"
+    az dt twin create -n $adtname --dtmi $turbineid --twin-id "shelfid$i"
+    az dt twin update -n $adtname --twin-id "shelfid$i" --json-patch '[{"op":"add", "path":"/TurbineID", "value": "'"shelfid$i"'"}]'
+done
+
+for i in {1..16}
+do
+    echo "Create Turbine product$i"
+    az dt twin create -n $adtname --dtmi $turbineid --twin-id "product$i"
+    az dt twin update -n $adtname --twin-id "product$i" --json-patch '[{"op":"add", "path":"/TurbineID", "value": "'"product$i"'"}]'
 done
 
 

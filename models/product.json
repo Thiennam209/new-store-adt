@@ -1,0 +1,73 @@
+{
+  "@id": "dtmi:digitaltwins:Basic:Product;1",
+  "@type": "Interface",
+  "@context": ["dtmi:dtdl:context;2"],
+  "displayName": "Product",
+  "description": "Products data",
+  "contents": [
+    {
+      "@type": "Property",
+      "name": "storeid",
+      "displayName": "productid",
+      "description": "The unique id of the product",
+      "writable": true,
+      "schema": "string"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "timeInterval",
+      "description": "The time interval of this data",
+      "schema": "string"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "ProductName",
+      "schema": "string"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "ProductSellingRank",
+      "schema": "integer"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "SoldProductQuantity",
+      "schema": "integer"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "RemainProductQuantity",
+      "schema": "integer"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "ProductPrice",
+      "schema": "float"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "ProductCost",
+      "schema": "float"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "ProductDiscount",
+      "schema": "float"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "ProductProfitPerItem",
+      "schema": "float"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "ProductProfitPercentagePerItem",
+      "schema": "float"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "ProductImageURL",
+      "schema": "string"
+    }
+  ]
+}
