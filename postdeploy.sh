@@ -29,8 +29,8 @@ az extension add --name azure-iot -y
 git clone https://github.com/Thiennam209/new-store-adt
 
 # echo 'input model'
-shelfid=$(az dt model create -n $adtname --models ./adt_store/models/store.json --query [].id -o tsv)
-productid=$(az dt model create -n $adtname --models ./adt_store/models/product.json --query [].id -o tsv)
+shelfid=$(az dt model create -n $adtname --models ./new-store-adt/models/store.json --query [].id -o tsv)
+productid=$(az dt model create -n $adtname --models ./new-store-adt/models/product.json --query [].id -o tsv)
 
 # echo 'instantiate ADT Instances'
 for i in {1..8}
