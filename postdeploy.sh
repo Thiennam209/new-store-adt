@@ -29,7 +29,7 @@ az extension add --name azure-iot -y
 git clone https://github.com/Thiennam209/new-store-adt
 
 # echo 'input model'
-turbineid=$(az dt model create -n $adtname --models ./blade-infra/models/turbine.json --query [].id -o tsv)
+turbineid=$(az dt model create -n $adtname --models ./new-store-adt/models/turbine.json --query [].id -o tsv)
 
 # echo 'instantiate ADT Instances'
 for i in {98..107}
@@ -48,4 +48,4 @@ az dt route create --dt-name $adtname --endpoint-name "$egname-ep" --route-name 
 az eventgrid event-subscription create --name "$egname-broadcast-sub" --source-resource-id $egid --endpoint "$funcappid/functions/broadcast" --endpoint-type azurefunction
 
 # Retrieve and Upload models to blob storage
-az storage blob upload-batch --account-name $storagename -d $containername -s "./blade-infra/assets"
+az storage blob upload-batch --account-name $storagename -d $containername -s "./new-store-adt/assets"
