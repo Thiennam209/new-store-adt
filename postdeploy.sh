@@ -26,7 +26,7 @@ az config set extension.use_dynamic_install=yes_without_prompt
 az extension add --name azure-iot -y
 
 # echo 'retrieve files'
-git clone https://github.com/adamlash/blade-infra.git
+git clone https://github.com/Thiennam209/new-store-adt
 
 # echo 'input model'
 turbineid=$(az dt model create -n $adtname --models ./blade-infra/models/turbine.json --query [].id -o tsv)
