@@ -16,7 +16,7 @@ namespace SignalRFunctions
     public static class SignalRFunctions
     {
         public static string storeid;
-        public static string timeInterval;
+        public static string TimeInterval;
         public static string ProductName;
         public static int ProductSellingRank;
         public static int SoldProductQuantity;

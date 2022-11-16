@@ -15,7 +15,7 @@
     },
     {
       "@type": "Telemetry",
-      "name": "timeInterval",
+      "name": "TimeInterval",
       "description": "The time interval of this data",
       "schema": "string"
     },
