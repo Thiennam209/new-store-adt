@@ -29,24 +29,15 @@ az extension add --name azure-iot -y
 git clone https://github.com/Thiennam209/new-store-adt
 
 # echo 'input model'
-shelfid=$(az dt model create -n $adtname --models ./new-store-adt/models/store.json --query [].id -o tsv)
-productid=$(az dt model create -n $adtname --models ./new-store-adt/models/product.json --query [].id -o tsv)
+storeid=$(az dt model create -n $adtname --models ./new-store-adt/models/store.json --query [].id -o tsv)
 
 # echo 'instantiate ADT Instances'
-for i in {1..8}
+for i in {1..24}
 do
-    echo "Create Turbine shelfid$i"
-    az dt twin create -n $adtname --dtmi $shelfid --twin-id "shelfid$i"
-    az dt twin update -n $adtname --twin-id "shelfid$i" --json-patch '[{"op":"add", "path":"/storeid", "value": "'"shelfid$i"'"}]'
+    echo "Create Turbine storeid$i"
+    az dt twin create -n $adtname --dtmi $storeid --twin-id "storeid$i"
+    az dt twin update -n $adtname --twin-id "storeid$i" --json-patch '[{"op":"add", "path":"/storeid", "value": "'"storeid$i"'"}]'
 done
-
-for j in {1..16}
-do
-    echo "Create Turbine productid$j"
-    az dt twin create -n $adtname --dtmi $productid --twin-id "productid$j"
-    az dt twin update -n $adtname --twin-id "productid$j" --json-patch '[{"op":"add", "path":"/storeid", "value": "'"productid$j"'"}]'
-done
-
 
 # az eventgrid topic create -g $rgname --name $egname -l $location
 az dt endpoint create eventgrid --dt-name $adtname --eventgrid-resource-group $rgname --eventgrid-topic $egname --endpoint-name "$egname-ep"

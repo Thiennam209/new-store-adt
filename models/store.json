@@ -8,8 +8,8 @@
     {
       "@type": "Property",
       "name": "storeid",
-      "displayName": "shelfid",
-      "description": "The unique id of the store shelf",
+      "displayName": "storeid",
+      "description": "The unique id of the store shelfs and products",
       "writable": true,
       "schema": "string"
     },
@@ -17,6 +17,56 @@
       "@type": "Telemetry",
       "name": "TimeInterval",
       "description": "The time interval of this data",
+      "schema": "string"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "ProductName",
+      "schema": "string"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "ProductSellingRank",
+      "schema": "integer"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "SoldProductQuantity",
+      "schema": "integer"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "RemainProductQuantity",
+      "schema": "integer"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "ProductPrice",
+      "schema": "float"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "ProductCost",
+      "schema": "float"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "ProductDiscount",
+      "schema": "float"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "ProductProfitPerItem",
+      "schema": "float"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "ProductProfitPercentagePerItem",
+      "schema": "float"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "ProductImageURL",
       "schema": "string"
     },
     {

@@ -74,8 +74,8 @@ namespace My.Function
                     var ShelfProfitLastDay = deviceMessage["body"]["ShelfProfitLastDay"];
                     var ShelfProfitTotal = deviceMessage["body"]["ShelfProfitTotal"];
 
-                    log.LogInformation($"Device:{deviceId} Device Id is:{ID}");
-                    log.LogInformation($"Device:{deviceId} Time interval is:{TimeInterval}");
+                    log.LogInformation($"Device:{deviceId} Device Id is: {ID}");
+                    log.LogInformation($"Device:{deviceId} Time interval is: {TimeInterval}");
                     log.LogInformation($"Device: {deviceId} ProductName is: {ProductName}");
                     log.LogInformation($"Device: {deviceId} ProductSellingRank is: {ProductSellingRank}");
                     log.LogInformation($"Device: {deviceId} SoldProductQuantity: {SoldProductQuantity}");
