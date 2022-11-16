@@ -115,7 +115,7 @@ resource signalr 'Microsoft.SignalRService/signalR@2020-07-01-preview' = {
 resource appserver 'Microsoft.Web/serverfarms@2019-08-01' = {
   name: serverFarmName
   location: location
-  kind: 'api'
+  kind: 'functionapp'
   sku: {
     tier: 'Free'
     name: 'F1'

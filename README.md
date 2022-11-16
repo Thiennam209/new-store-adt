@@ -1,5 +1,5 @@
-$projectname="adtwind"
-$appreg="adtwind"
+$projectname="adtstore"
+$appreg="adtstore"
 az ad sp create-for-rbac --name ${appreg} --skip-assignment > AppCredentials.txt
 $objectid=$(az ad sp list --display-name ${appreg} --query [0].id --output tsv)
 $userid=$(az ad signed-in-user show --query id -o tsv)
