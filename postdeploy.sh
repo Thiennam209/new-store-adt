@@ -42,9 +42,9 @@ done
 
 for i in {1..16}
 do
-    echo "Create Turbine product$i"
-    az dt twin create -n $adtname --dtmi $productid --twin-id "product$i"
-    az dt twin update -n $adtname --twin-id "product$i" --json-patch '[{"op":"add", "path":"/storeid", "value": "'"product$i"'"}]'
+    echo "Create Turbine productid$i"
+    az dt twin create -n $adtname --dtmi $productid --twin-id "productid$i"
+    az dt twin update -n $adtname --twin-id "productid$i" --json-patch '[{"op":"add", "path":"/storeid", "value": "'"productid$i"'"}]'
 done
 
 
