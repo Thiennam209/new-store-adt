@@ -117,8 +117,8 @@ resource appserver 'Microsoft.Web/serverfarms@2019-08-01' = {
   location: location
   kind: 'functionapp'
   sku: {
-    tier: 'Free'
-    name: 'F1'
+    tier: 'Basic'
+    name: 'B1'
   }
 }
 
