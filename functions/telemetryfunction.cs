@@ -44,6 +44,8 @@ namespace My.Function
                     string deviceId = (string)deviceMessage["systemProperties"]["iothub-connection-device-id"];
                     var ID = deviceMessage["body"]["storeid"];
                     var TimeInterval = deviceMessage["body"]["TimeInterval"];
+                    var ShelfId = deviceMessage["body"]["ShelfId"];
+                    var ProductId = deviceMessage["body"]["ProductId"];
                     var ProductName = deviceMessage["body"]["ProductName"];
                     var ProductSellingRank = deviceMessage["body"]["ProductSellingRank"];
                     var SoldProductQuantity = deviceMessage["body"]["SoldProductQuantity"];
@@ -54,6 +56,7 @@ namespace My.Function
                     var ProductProfitPerItem = deviceMessage["body"]["ProductProfitPerItem"];
                     var ProductProfitPercentagePerItem = deviceMessage["body"]["ProductProfitPercentagePerItem"];
                     var ProductImageURL = deviceMessage["body"]["ProductImageURL"];
+                    var ShelfRank = deviceMessage["body"]["ShelfRank"];
                     var CustomerQuantityLastHour = deviceMessage["body"]["CustomerQuantityLastHour"];
                     var CustomerQuantityLastDay = deviceMessage["body"]["CustomerQuantityLastDay"];
                     var CustomerQuantityTotal = deviceMessage["body"]["CustomerQuantityTotal"];
@@ -76,6 +79,8 @@ namespace My.Function
 
                     log.LogInformation($"Device:{deviceId} Device Id is: {ID}");
                     log.LogInformation($"Device:{deviceId} Time interval is: {TimeInterval}");
+                    log.LogInformation($"Device:{deviceId} ShelfId is: {ShelfId}");
+                    log.LogInformation($"Device:{deviceId} ProductId is: {ProductId}");
                     log.LogInformation($"Device: {deviceId} ProductName is: {ProductName}");
                     log.LogInformation($"Device: {deviceId} ProductSellingRank is: {ProductSellingRank}");
                     log.LogInformation($"Device: {deviceId} SoldProductQuantity: {SoldProductQuantity}");
@@ -86,6 +91,7 @@ namespace My.Function
                     log.LogInformation($"Device: {deviceId} ProductProfitPerItem is: {ProductProfitPerItem}");
                     log.LogInformation($"Device: {deviceId} ProductProfitPercentagePerItem is: {ProductProfitPercentagePerItem}");
                     log.LogInformation($"Device: {deviceId} ProductImageURL is: {ProductImageURL}");
+                    log.LogInformation($"Device: {deviceId} ShelfRank is: {ShelfRank}");
                     log.LogInformation($"Device: {deviceId} CustomerQuantityLastHour is: {CustomerQuantityLastHour}");
                     log.LogInformation($"Device: {deviceId} CustomerQuantityLastDay is: {CustomerQuantityLastDay}");
                     log.LogInformation($"Device: {deviceId} CustomerQuantityTotal is: {CustomerQuantityTotal}");
@@ -110,6 +116,8 @@ namespace My.Function
                     {
                         ["storeid"] = ID,
                         ["TimeInterval"] = TimeInterval,
+                        ["ShelfId"] = ShelfId,
+                        ["ProductId"] = ProductId,
                         ["ProductName"] = ProductName,
                         ["ProductSellingRank"] = ProductSellingRank,
                         ["SoldProductQuantity"] = SoldProductQuantity,
@@ -120,6 +128,7 @@ namespace My.Function
                         ["ProductProfitPerItem"] = ProductProfitPerItem,
                         ["ProductProfitPercentagePerItem"] = ProductProfitPercentagePerItem,
                         ["ProductImageURL"] = ProductImageURL,
+                        ["ShelfRank"] = ShelfRank,
                         ["CustomerQuantityLastHour"] = CustomerQuantityLastHour,
                         ["CustomerQuantityLastDay"] = CustomerQuantityLastDay,
                         ["CustomerQuantityTotal"] = CustomerQuantityTotal,

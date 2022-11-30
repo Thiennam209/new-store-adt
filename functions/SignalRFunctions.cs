@@ -17,6 +17,8 @@ namespace SignalRFunctions
     {
         public static string storeid;
         public static string TimeInterval;
+        public static int ShelfId;
+        public static int ProductId;
         public static string ProductName;
         public static int ProductSellingRank;
         public static int SoldProductQuantity;
@@ -27,6 +29,7 @@ namespace SignalRFunctions
         public static float ProductProfitPerItem;
         public static float ProductProfitPercentagePerItem;
         public static string ProductImageURL;
+        public static int ShelfRank;
         public static int CustomerQuantityLastHour;
         public static int CustomerQuantityLastDay;
         public static int CustomerQuantityTotal;

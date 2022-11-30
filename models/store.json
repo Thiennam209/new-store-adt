@@ -21,6 +21,16 @@
     },
     {
       "@type": "Telemetry",
+      "name": "ShelfId",
+      "schema": "integer"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "ProductId",
+      "schema": "integer"
+    },
+    {
+      "@type": "Telemetry",
       "name": "ProductName",
       "schema": "string"
     },
@@ -68,6 +78,11 @@
       "@type": "Telemetry",
       "name": "ProductImageURL",
       "schema": "string"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "ShelfRank",
+      "schema": "integer"
     },
     {
       "@type": "Telemetry",
