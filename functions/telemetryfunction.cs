@@ -47,7 +47,7 @@ namespace My.Function
                     var ShelfId = deviceMessage["body"]["ShelfId"];
                     var ProductId = deviceMessage["body"]["ProductId"];
                     var ProductName = deviceMessage["body"]["ProductName"];
-                    var ShelfContainProductName = deviceMessage["body"]["ShelfContainProductName"];
+                    var ShelfContainProductNames = deviceMessage["body"]["ShelfContainProductNames"];
                     var ProductSellingRank = deviceMessage["body"]["ProductSellingRank"];
                     var SoldProductQuantity = deviceMessage["body"]["SoldProductQuantity"];
                     var RemainProductQuantity = deviceMessage["body"]["RemainProductQuantity"];
@@ -83,7 +83,7 @@ namespace My.Function
                     log.LogInformation($"Device:{deviceId} ShelfId is: {ShelfId}");
                     log.LogInformation($"Device:{deviceId} ProductId is: {ProductId}");
                     log.LogInformation($"Device: {deviceId} ProductName is: {ProductName}");
-                    log.LogInformation($"Device: {deviceId} ShelfContainProductName is: {ShelfContainProductName}");
+                    log.LogInformation($"Device: {deviceId} ShelfContainProductNames is: {ShelfContainProductNames}");
                     log.LogInformation($"Device: {deviceId} ProductSellingRank is: {ProductSellingRank}");
                     log.LogInformation($"Device: {deviceId} SoldProductQuantity: {SoldProductQuantity}");
                     log.LogInformation($"Device: {deviceId} RemainProductQuantity is: {RemainProductQuantity}");
@@ -121,7 +121,7 @@ namespace My.Function
                         ["ShelfId"] = ShelfId,
                         ["ProductId"] = ProductId,
                         ["ProductName"] = ProductName,
-                        ["ShelfContainProductName"] = ShelfContainProductName,
+                        ["ShelfContainProductNames"] = ShelfContainProductNames,
                         ["ProductSellingRank"] = ProductSellingRank,
                         ["SoldProductQuantity"] = SoldProductQuantity,
                         ["RemainProductQuantity"] = RemainProductQuantity,
