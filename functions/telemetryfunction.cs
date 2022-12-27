@@ -49,7 +49,9 @@ namespace My.Function
                     var ProductName = deviceMessage["body"]["ProductName"];
                     var ShelfContainProductNames = deviceMessage["body"]["ShelfContainProductNames"];
                     var ProductSellingRank = deviceMessage["body"]["ProductSellingRank"];
-                    var SoldProductQuantity = deviceMessage["body"]["SoldProductQuantity"];
+                    var SoldProductQuantityLastHour = deviceMessage["body"]["SoldProductQuantityLastHour"];
+                    var SoldProductQuantityLastDay = deviceMessage["body"]["SoldProductQuantityLastDay"];
+                    var SoldProductQuantityLast3Months = deviceMessage["body"]["SoldProductQuantityLast3Months"];
                     var RemainProductQuantity = deviceMessage["body"]["RemainProductQuantity"];
                     var ProductPrice = deviceMessage["body"]["ProductPrice"];
                     var ProductCost = deviceMessage["body"]["ProductCost"];
@@ -60,23 +62,23 @@ namespace My.Function
                     var ShelfRank = deviceMessage["body"]["ShelfRank"];
                     var CustomerQuantityLastHour = deviceMessage["body"]["CustomerQuantityLastHour"];
                     var CustomerQuantityLastDay = deviceMessage["body"]["CustomerQuantityLastDay"];
-                    var CustomerQuantityTotal = deviceMessage["body"]["CustomerQuantityTotal"];
+                    var CustomerQuantityLast3Months = deviceMessage["body"]["CustomerQuantityLast3Months"];
                     var ShelfProductNames = deviceMessage["body"]["ShelfProductNames"];
                     var ShelfItemQuantity = deviceMessage["body"]["ShelfItemQuantity"];
                     var ShelfRevenueLastHour = deviceMessage["body"]["ShelfRevenueLastHour"];
                     var ShelfRevenueLastDay = deviceMessage["body"]["ShelfRevenueLastDay"];
-                    var ShelfRevenueTotal = deviceMessage["body"]["ShelfRevenueTotal"];
+                    var ShelfRevenueLast3Months = deviceMessage["body"]["ShelfRevenueLast3Months"];
                     var ShelfSoldItemQuantityLastHour = deviceMessage["body"]["ShelfSoldItemQuantityLastHour"];
                     var ShelfSoldItemQuantityLastDay = deviceMessage["body"]["ShelfSoldItemQuantityLastDay"];
-                    var ShelfSoldItemQuantityTotal = deviceMessage["body"]["ShelfSoldItemQuantityTotal"];
+                    var ShelfSoldItemQuantityLast3Months = deviceMessage["body"]["ShelfSoldItemQuantityLast3Months"];
                     var ShelfCostPerItem = deviceMessage["body"]["ShelfCostPerItem"];
                     var ShelfPricePerItem = deviceMessage["body"]["ShelfPricePerItem"];
                     var ConversionRateLastHour = deviceMessage["body"]["ConversionRateLastHour"];
                     var ConversionRateLastDay = deviceMessage["body"]["ConversionRateLastDay"];
-                    var ConversionRateTotal = deviceMessage["body"]["ConversionRateTotal"];
+                    var ConversionRateLast3Months = deviceMessage["body"]["ConversionRateLast3Months"];
                     var ShelfProfitLastHour = deviceMessage["body"]["ShelfProfitLastHour"];
                     var ShelfProfitLastDay = deviceMessage["body"]["ShelfProfitLastDay"];
-                    var ShelfProfitTotal = deviceMessage["body"]["ShelfProfitTotal"];
+                    var ShelfProfitLast3Months = deviceMessage["body"]["ShelfProfitLast3Months"];
 
                     log.LogInformation($"Device:{deviceId} Device Id is: {ID}");
                     log.LogInformation($"Device:{deviceId} Time interval is: {TimeInterval}");
@@ -85,7 +87,9 @@ namespace My.Function
                     log.LogInformation($"Device: {deviceId} ProductName is: {ProductName}");
                     log.LogInformation($"Device: {deviceId} ShelfContainProductNames is: {ShelfContainProductNames}");
                     log.LogInformation($"Device: {deviceId} ProductSellingRank is: {ProductSellingRank}");
-                    log.LogInformation($"Device: {deviceId} SoldProductQuantity: {SoldProductQuantity}");
+                    log.LogInformation($"Device: {deviceId} SoldProductQuantityLastHour: {SoldProductQuantityLastHour}");
+                    log.LogInformation($"Device: {deviceId} SoldProductQuantityLastDay: {SoldProductQuantityLastDay}");
+                    log.LogInformation($"Device: {deviceId} SoldProductQuantityLast3Months: {SoldProductQuantityLast3Months}");
                     log.LogInformation($"Device: {deviceId} RemainProductQuantity is: {RemainProductQuantity}");
                     log.LogInformation($"Device: {deviceId} ProductPrice is: {ProductPrice}");
                     log.LogInformation($"Device: {deviceId} ProductCost is: {ProductCost}");
@@ -96,23 +100,23 @@ namespace My.Function
                     log.LogInformation($"Device: {deviceId} ShelfRank is: {ShelfRank}");
                     log.LogInformation($"Device: {deviceId} CustomerQuantityLastHour is: {CustomerQuantityLastHour}");
                     log.LogInformation($"Device: {deviceId} CustomerQuantityLastDay is: {CustomerQuantityLastDay}");
-                    log.LogInformation($"Device: {deviceId} CustomerQuantityTotal is: {CustomerQuantityTotal}");
+                    log.LogInformation($"Device: {deviceId} CustomerQuantityLast3Months is: {CustomerQuantityLast3Months}");
                     log.LogInformation($"Device: {deviceId} ShelfProductNames is: {ShelfProductNames}");
                     log.LogInformation($"Device: {deviceId} ShelfItemQuantity is: {ShelfItemQuantity}");
                     log.LogInformation($"Device: {deviceId} ShelfRevenueLastHour is: {ShelfRevenueLastHour}");
                     log.LogInformation($"Device: {deviceId} ShelfRevenueLastDay is: {ShelfRevenueLastDay}");
-                    log.LogInformation($"Device: {deviceId} ShelfRevenueTotal is: {ShelfRevenueTotal}");
+                    log.LogInformation($"Device: {deviceId} ShelfRevenueLast3Months is: {ShelfRevenueLast3Months}");
                     log.LogInformation($"Device: {deviceId} ShelfSoldItemQuantityLastHour is: {ShelfSoldItemQuantityLastHour}");
                     log.LogInformation($"Device: {deviceId} ShelfSoldItemQuantityLastDay is: {ShelfSoldItemQuantityLastDay}");
-                    log.LogInformation($"Device: {deviceId} ShelfSoldItemQuantityTotal is: {ShelfSoldItemQuantityTotal}");
+                    log.LogInformation($"Device: {deviceId} ShelfSoldItemQuantityLast3Months is: {ShelfSoldItemQuantityLast3Months}");
                     log.LogInformation($"Device: {deviceId} ShelfCostPerItem is: {ShelfCostPerItem}");
                     log.LogInformation($"Device: {deviceId} ShelfPricePerItem is: {ShelfPricePerItem}");
                     log.LogInformation($"Device: {deviceId} ConversionRateLastHour is: {ConversionRateLastHour}");
                     log.LogInformation($"Device: {deviceId} ConversionRateLastDay is: {ConversionRateLastDay}");
-                    log.LogInformation($"Device: {deviceId} ConversionRateTotal is: {ConversionRateTotal}");
+                    log.LogInformation($"Device: {deviceId} ConversionRateLast3Months is: {ConversionRateLast3Months}");
                     log.LogInformation($"Device: {deviceId} ShelfProfitLastHour is: {ShelfProfitLastHour}");
                     log.LogInformation($"Device: {deviceId} ShelfProfitLastDay is: {ShelfProfitLastDay}");
-                    log.LogInformation($"Device: {deviceId} ShelfProfitTotal is: {ShelfProfitTotal}");
+                    log.LogInformation($"Device: {deviceId} ShelfProfitLast3Months is: {ShelfProfitLast3Months}");
                     var updateProperty = new JsonPatchDocument();
                     var turbineTelemetry = new Dictionary<string, Object>()
                     {
@@ -123,7 +127,9 @@ namespace My.Function
                         ["ProductName"] = ProductName,
                         ["ShelfContainProductNames"] = ShelfContainProductNames,
                         ["ProductSellingRank"] = ProductSellingRank,
-                        ["SoldProductQuantity"] = SoldProductQuantity,
+                        ["SoldProductQuantityLastHour"] = SoldProductQuantityLastHour,
+                        ["SoldProductQuantityLastDay"] = SoldProductQuantityLastDay,
+                        ["SoldProductQuantityLast3Months"] = SoldProductQuantityLast3Months,
                         ["RemainProductQuantity"] = RemainProductQuantity,
                         ["ProductPrice"] = ProductPrice,
                         ["ProductCost"] = ProductCost,
@@ -134,23 +140,23 @@ namespace My.Function
                         ["ShelfRank"] = ShelfRank,
                         ["CustomerQuantityLastHour"] = CustomerQuantityLastHour,
                         ["CustomerQuantityLastDay"] = CustomerQuantityLastDay,
-                        ["CustomerQuantityTotal"] = CustomerQuantityTotal,
+                        ["CustomerQuantityLast3Months"] = CustomerQuantityLast3Months,
                         ["ShelfProductNames"] = ShelfProductNames,
                         ["ShelfItemQuantity"] = ShelfItemQuantity,
                         ["ShelfRevenueLastHour"] = ShelfRevenueLastHour,
                         ["ShelfRevenueLastDay"] = ShelfRevenueLastDay,
-                        ["ShelfRevenueTotal"] = ShelfRevenueTotal,
+                        ["ShelfRevenueLast3Months"] = ShelfRevenueLast3Months,
                         ["ShelfSoldItemQuantityLastHour"] = ShelfSoldItemQuantityLastHour,
                         ["ShelfSoldItemQuantityLastDay"] = ShelfSoldItemQuantityLastDay,
-                        ["ShelfSoldItemQuantityTotal"] = ShelfSoldItemQuantityTotal,
+                        ["ShelfSoldItemQuantityLast3Months"] = ShelfSoldItemQuantityLast3Months,
                         ["ShelfCostPerItem"] = ShelfCostPerItem,
                         ["ShelfPricePerItem"] = ShelfPricePerItem,
                         ["ConversionRateLastHour"] = ConversionRateLastHour,
                         ["ConversionRateLastDay"] = ConversionRateLastDay,
-                        ["ConversionRateTotal"] = ConversionRateTotal,
+                        ["ConversionRateLast3Months"] = ConversionRateLast3Months,
                         ["ShelfProfitLastHour"] = ShelfProfitLastHour,
                         ["ShelfProfitLastDay"] = ShelfProfitLastDay,
-                        ["ShelfProfitTotal"] = ShelfProfitTotal
+                        ["ShelfProfitLast3Months"] = ShelfProfitLast3Months
                     };
                     updateProperty.AppendAdd("/storeid", ID.Value<string>());
 

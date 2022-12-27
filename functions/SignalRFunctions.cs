@@ -22,7 +22,9 @@ namespace SignalRFunctions
         public static string ProductName;
         public static string ShelfContainProductNames;
         public static int ProductSellingRank;
-        public static int SoldProductQuantity;
+        public static int SoldProductQuantityLastHour;
+        public static int SoldProductQuantityLastDay;
+        public static int SoldProductQuantityLast3Months;
         public static int RemainProductQuantity;
         public static float ProductPrice;
         public static float ProductCost;
@@ -33,23 +35,23 @@ namespace SignalRFunctions
         public static int ShelfRank;
         public static int CustomerQuantityLastHour;
         public static int CustomerQuantityLastDay;
-        public static int CustomerQuantityTotal;
+        public static int CustomerQuantityLast3Months;
         public static string ShelfProductNames;
         public static int ShelfItemQuantity;
         public static float ShelfRevenueLastHour;
         public static float ShelfRevenueLastDay;
-        public static float ShelfRevenueTotal;
+        public static float ShelfRevenueLast3Months;
         public static int ShelfSoldItemQuantityLastHour;
         public static int ShelfSoldItemQuantityLastDay;
-        public static int ShelfSoldItemQuantityTotal;
+        public static int ShelfSoldItemQuantityLast3Months;
         public static float ShelfCostPerItem;
         public static float ShelfPricePerItem;
         public static float ConversionRateLastHour;
         public static float ConversionRateLastDay;
-        public static float ConversionRateTotal;
+        public static float ConversionRateLast3Months;
         public static float ShelfProfitLastHour;
         public static float ShelfProfitLastDay;
-        public static float ShelfProfitTotal;
+        public static float ShelfProfitLast3Months;
 
         [FunctionName("negotiate")]
         public static SignalRConnectionInfo GetSignalRInfo(

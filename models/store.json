@@ -46,7 +46,17 @@
     },
     {
       "@type": "Telemetry",
-      "name": "SoldProductQuantity",
+      "name": "SoldProductQuantityLastHour",
+      "schema": "integer"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "SoldProductQuantityLastDay",
+      "schema": "integer"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "SoldProductQuantityLast3Months",
       "schema": "integer"
     },
     {
@@ -101,7 +111,7 @@
     },
     {
       "@type": "Telemetry",
-      "name": "CustomerQuantityTotal",
+      "name": "CustomerQuantityLast3Months",
       "schema": "integer"
     },
     {
@@ -126,7 +136,7 @@
     },
     {
       "@type": "Telemetry",
-      "name": "ShelfRevenueTotal",
+      "name": "ShelfRevenueLast3Months",
       "schema": "float"
     },
     {
@@ -141,7 +151,7 @@
     },
     {
       "@type": "Telemetry",
-      "name": "ShelfSoldItemQuantityTotal",
+      "name": "ShelfSoldItemQuantityLast3Months",
       "schema": "integer"
     },
     {
@@ -166,7 +176,7 @@
     },
     {
       "@type": "Telemetry",
-      "name": "ConversionRateTotal",
+      "name": "ConversionRateLast3Months",
       "schema": "float"
     },
     {
@@ -181,7 +191,7 @@
     },
     {
       "@type": "Telemetry",
-      "name": "ShelfProfitTotal",
+      "name": "ShelfProfitLast3Months",
       "schema": "float"
     }
   ]
