@@ -2,8 +2,8 @@
   "@id": "dtmi:digitaltwins:Basic:Store;1",
   "@type": "Interface",
   "@context": ["dtmi:dtdl:context;2"],
-  "displayName": "Store layout",
-  "description": "Store layout data",
+  "displayName": "Ecommerce Store",
+  "description": "Ecommerce Store data",
   "contents": [
     {
       "@type": "Property",
@@ -36,7 +36,7 @@
     },
     {
       "@type": "Telemetry",
-      "name": "ShelfContainProductNames",
+      "name": "ProductOnShelfName",
       "schema": "string"
     },
     {
@@ -46,22 +46,17 @@
     },
     {
       "@type": "Telemetry",
-      "name": "SoldProductQuantityLastHour",
+      "name": "ProductSalesLastDay",
       "schema": "integer"
     },
     {
       "@type": "Telemetry",
-      "name": "SoldProductQuantityLastDay",
+      "name": "ProductSalesLastMonth",
       "schema": "integer"
     },
     {
       "@type": "Telemetry",
-      "name": "SoldProductQuantityLast3Months",
-      "schema": "integer"
-    },
-    {
-      "@type": "Telemetry",
-      "name": "RemainProductQuantity",
+      "name": "ProductSalesLast3Months",
       "schema": "integer"
     },
     {
@@ -76,17 +71,42 @@
     },
     {
       "@type": "Telemetry",
-      "name": "ProductDiscount",
+      "name": "ProductSalesOffPercents",
       "schema": "float"
     },
     {
       "@type": "Telemetry",
-      "name": "ProductProfitPerItem",
+      "name": "ProductRevenuePerItem",
       "schema": "float"
     },
     {
       "@type": "Telemetry",
-      "name": "ProductProfitPercentagePerItem",
+      "name": "ProductProfitLastDay",
+      "schema": "float"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "ProductProfitLastMonth",
+      "schema": "float"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "ProductProfitLast3Months",
+      "schema": "float"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "ProductRevenueLastDay",
+      "schema": "float"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "ProductRevenueLastMonth",
+      "schema": "float"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "ProductRevenueLast3Months",
       "schema": "float"
     },
     {
@@ -101,17 +121,17 @@
     },
     {
       "@type": "Telemetry",
-      "name": "CustomerQuantityLastHour",
+      "name": "ShelfCustomerQuantityLastDay",
       "schema": "integer"
     },
     {
       "@type": "Telemetry",
-      "name": "CustomerQuantityLastDay",
+      "name": "ShelfCustomerQuantityLastMonth",
       "schema": "integer"
     },
     {
       "@type": "Telemetry",
-      "name": "CustomerQuantityLast3Months",
+      "name": "ShelfCustomerQuantityLast3Months",
       "schema": "integer"
     },
     {
@@ -126,52 +146,27 @@
     },
     {
       "@type": "Telemetry",
-      "name": "ShelfRevenueLastHour",
-      "schema": "float"
-    },
-    {
-      "@type": "Telemetry",
-      "name": "ShelfRevenueLastDay",
-      "schema": "float"
-    },
-    {
-      "@type": "Telemetry",
-      "name": "ShelfRevenueLast3Months",
-      "schema": "float"
-    },
-    {
-      "@type": "Telemetry",
-      "name": "ShelfSoldItemQuantityLastHour",
+      "name": "ShelfSalesLastDay",
       "schema": "integer"
     },
     {
       "@type": "Telemetry",
-      "name": "ShelfSoldItemQuantityLastDay",
+      "name": "ShelfSalesLastMonth",
       "schema": "integer"
     },
     {
       "@type": "Telemetry",
-      "name": "ShelfSoldItemQuantityLast3Months",
+      "name": "ShelfSalesLast3Months",
       "schema": "integer"
-    },
-    {
-      "@type": "Telemetry",
-      "name": "ShelfCostPerItem",
-      "schema": "float"
-    },
-    {
-      "@type": "Telemetry",
-      "name": "ShelfPricePerItem",
-      "schema": "float"
-    },
-    {
-      "@type": "Telemetry",
-      "name": "ConversionRateLastHour",
-      "schema": "float"
     },
     {
       "@type": "Telemetry",
       "name": "ConversionRateLastDay",
+      "schema": "float"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "ConversionRateLastMonth",
       "schema": "float"
     },
     {
@@ -181,17 +176,77 @@
     },
     {
       "@type": "Telemetry",
-      "name": "ShelfProfitLastHour",
-      "schema": "float"
-    },
-    {
-      "@type": "Telemetry",
       "name": "ShelfProfitLastDay",
       "schema": "float"
     },
     {
       "@type": "Telemetry",
+      "name": "ShelfProfitLastMonth",
+      "schema": "float"
+    },
+    {
+      "@type": "Telemetry",
       "name": "ShelfProfitLast3Months",
+      "schema": "float"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "ShelfRevenueLastDay",
+      "schema": "float"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "ShelfRevenueLastMonth",
+      "schema": "float"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "ShelfRevenueLast3Months",
+      "schema": "float"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "StoreSalesLastDay",
+      "schema": "integer"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "StoreSalesLastMonth",
+      "schema": "integer"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "StoreSalesLast3Months",
+      "schema": "integer"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "StoreProfitLastDay",
+      "schema": "float"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "StoreProfitLastMonth",
+      "schema": "float"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "StoreProfitLast3Months",
+      "schema": "float"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "StoreRevenueLastDay",
+      "schema": "float"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "StoreRevenueLastMonth",
+      "schema": "float"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "StoreRevenueLast3Months",
       "schema": "float"
     }
   ]

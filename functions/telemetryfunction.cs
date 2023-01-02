@@ -47,76 +47,99 @@ namespace My.Function
                     var ShelfId = deviceMessage["body"]["ShelfId"];
                     var ProductId = deviceMessage["body"]["ProductId"];
                     var ProductName = deviceMessage["body"]["ProductName"];
-                    var ShelfContainProductNames = deviceMessage["body"]["ShelfContainProductNames"];
+                    var ProductOnShelfName = deviceMessage["body"]["ProductOnShelfName"];
                     var ProductSellingRank = deviceMessage["body"]["ProductSellingRank"];
-                    var SoldProductQuantityLastHour = deviceMessage["body"]["SoldProductQuantityLastHour"];
-                    var SoldProductQuantityLastDay = deviceMessage["body"]["SoldProductQuantityLastDay"];
-                    var SoldProductQuantityLast3Months = deviceMessage["body"]["SoldProductQuantityLast3Months"];
-                    var RemainProductQuantity = deviceMessage["body"]["RemainProductQuantity"];
+                    var ProductSalesLastDay = deviceMessage["body"]["ProductSalesLastDay"];
+                    var ProductSalesLastMonth = deviceMessage["body"]["ProductSalesLastMonth"];
+                    var ProductSalesLast3Months = deviceMessage["body"]["ProductSalesLast3Months"];
                     var ProductPrice = deviceMessage["body"]["ProductPrice"];
                     var ProductCost = deviceMessage["body"]["ProductCost"];
-                    var ProductDiscount = deviceMessage["body"]["ProductDiscount"];
-                    var ProductProfitPerItem = deviceMessage["body"]["ProductProfitPerItem"];
-                    var ProductProfitPercentagePerItem = deviceMessage["body"]["ProductProfitPercentagePerItem"];
+                    var ProductSalesOffPercents = deviceMessage["body"]["ProductSalesOffPercents"];
+                    var ProductRevenuePerItem = deviceMessage["body"]["ProductRevenuePerItem"];
+                    var ProductProfitLastDay = deviceMessage["body"]["ProductProfitLastDay"];
+                    var ProductProfitLastMonth = deviceMessage["body"]["ProductProfitLastMonth"];
+                    var ProductProfitLast3Months = deviceMessage["body"]["ProductProfitLast3Months"];
+                    var ProductRevenueLastDay = deviceMessage["body"]["ProductRevenueLastDay"];
+                    var ProductRevenueLastMonth = deviceMessage["body"]["ProductRevenueLastMonth"];
+                    var ProductRevenueLast3Months = deviceMessage["body"]["ProductRevenueLast3Months"];
                     var ProductImageURL = deviceMessage["body"]["ProductImageURL"];
                     var ShelfRank = deviceMessage["body"]["ShelfRank"];
-                    var CustomerQuantityLastHour = deviceMessage["body"]["CustomerQuantityLastHour"];
-                    var CustomerQuantityLastDay = deviceMessage["body"]["CustomerQuantityLastDay"];
-                    var CustomerQuantityLast3Months = deviceMessage["body"]["CustomerQuantityLast3Months"];
+                    var ShelfCustomerQuantityLastDay = deviceMessage["body"]["ShelfCustomerQuantityLastDay"];
+                    var ShelfCustomerQuantityLastMonth = deviceMessage["body"]["ShelfCustomerQuantityLastMonth"];
+                    var ShelfCustomerQuantityLast3Months = deviceMessage["body"]["ShelfCustomerQuantityLast3Months"];
                     var ShelfProductNames = deviceMessage["body"]["ShelfProductNames"];
                     var ShelfItemQuantity = deviceMessage["body"]["ShelfItemQuantity"];
-                    var ShelfRevenueLastHour = deviceMessage["body"]["ShelfRevenueLastHour"];
-                    var ShelfRevenueLastDay = deviceMessage["body"]["ShelfRevenueLastDay"];
-                    var ShelfRevenueLast3Months = deviceMessage["body"]["ShelfRevenueLast3Months"];
-                    var ShelfSoldItemQuantityLastHour = deviceMessage["body"]["ShelfSoldItemQuantityLastHour"];
-                    var ShelfSoldItemQuantityLastDay = deviceMessage["body"]["ShelfSoldItemQuantityLastDay"];
-                    var ShelfSoldItemQuantityLast3Months = deviceMessage["body"]["ShelfSoldItemQuantityLast3Months"];
-                    var ShelfCostPerItem = deviceMessage["body"]["ShelfCostPerItem"];
-                    var ShelfPricePerItem = deviceMessage["body"]["ShelfPricePerItem"];
-                    var ConversionRateLastHour = deviceMessage["body"]["ConversionRateLastHour"];
+                    var ShelfSalesLastDay = deviceMessage["body"]["ShelfSalesLastDay"];
+                    var ShelfSalesLastMonth = deviceMessage["body"]["ShelfSalesLastMonth"];
+                    var ShelfSalesLast3Months = deviceMessage["body"]["ShelfSalesLast3Months"];
                     var ConversionRateLastDay = deviceMessage["body"]["ConversionRateLastDay"];
+                    var ConversionRateLastMonth = deviceMessage["body"]["ConversionRateLastMonth"];
                     var ConversionRateLast3Months = deviceMessage["body"]["ConversionRateLast3Months"];
-                    var ShelfProfitLastHour = deviceMessage["body"]["ShelfProfitLastHour"];
                     var ShelfProfitLastDay = deviceMessage["body"]["ShelfProfitLastDay"];
+                    var ShelfProfitLastMonth = deviceMessage["body"]["ShelfProfitLastMonth"];
                     var ShelfProfitLast3Months = deviceMessage["body"]["ShelfProfitLast3Months"];
+                    var ShelfRevenueLastDay = deviceMessage["body"]["ShelfRevenueLastDay"];
+                    var ShelfRevenueLastMonth = deviceMessage["body"]["ShelfRevenueLastMonth"];
+                    var ShelfRevenueLast3Months = deviceMessage["body"]["ShelfRevenueLast3Months"];
+                    var StoreSalesLastDay = deviceMessage["body"]["StoreSalesLastDay"];
+                    var StoreSalesLastMonth = deviceMessage["body"]["StoreSalesLastMonth"];
+                    var StoreSalesLast3Months = deviceMessage["body"]["StoreSalesLast3Months"];
+                    var StoreProfitLastDay = deviceMessage["body"]["StoreProfitLastDay"];
+                    var StoreProfitLastMonth = deviceMessage["body"]["StoreProfitLastMonth"];
+                    var StoreProfitLast3Months = deviceMessage["body"]["StoreProfitLast3Months"];
+                    var StoreRevenueLastDay = deviceMessage["body"]["StoreRevenueLastDay"];
+                    var StoreRevenueLastMonth = deviceMessage["body"]["StoreRevenueLastMonth"];
+                    var StoreRevenueLast3Months = deviceMessage["body"]["StoreRevenueLast3Months"];
 
                     log.LogInformation($"Device:{deviceId} Device Id is: {ID}");
                     log.LogInformation($"Device:{deviceId} Time interval is: {TimeInterval}");
                     log.LogInformation($"Device:{deviceId} ShelfId is: {ShelfId}");
                     log.LogInformation($"Device:{deviceId} ProductId is: {ProductId}");
                     log.LogInformation($"Device: {deviceId} ProductName is: {ProductName}");
-                    log.LogInformation($"Device: {deviceId} ShelfContainProductNames is: {ShelfContainProductNames}");
-                    log.LogInformation($"Device: {deviceId} ProductSellingRank is: {ProductSellingRank}");
-                    log.LogInformation($"Device: {deviceId} SoldProductQuantityLastHour: {SoldProductQuantityLastHour}");
-                    log.LogInformation($"Device: {deviceId} SoldProductQuantityLastDay: {SoldProductQuantityLastDay}");
-                    log.LogInformation($"Device: {deviceId} SoldProductQuantityLast3Months: {SoldProductQuantityLast3Months}");
-                    log.LogInformation($"Device: {deviceId} RemainProductQuantity is: {RemainProductQuantity}");
-                    log.LogInformation($"Device: {deviceId} ProductPrice is: {ProductPrice}");
-                    log.LogInformation($"Device: {deviceId} ProductCost is: {ProductCost}");
-                    log.LogInformation($"Device: {deviceId} ProductDiscount is: {ProductDiscount}");
-                    log.LogInformation($"Device: {deviceId} ProductProfitPerItem is: {ProductProfitPerItem}");
-                    log.LogInformation($"Device: {deviceId} ProductProfitPercentagePerItem is: {ProductProfitPercentagePerItem}");
-                    log.LogInformation($"Device: {deviceId} ProductImageURL is: {ProductImageURL}");
+                    // log.LogInformation($"Device: {deviceId} ProductOnShelfName is: {ProductOnShelfName}");
+                    // log.LogInformation($"Device: {deviceId} ProductSellingRank is: {ProductSellingRank}");
+                    // log.LogInformation($"Device: {deviceId} ProductSalesLastDay: {ProductSalesLastDay}");
+                    // log.LogInformation($"Device: {deviceId} ProductSalesLastMonth: {ProductSalesLastMonth}");
+                    // log.LogInformation($"Device: {deviceId} ProductSalesLast3Months: {ProductSalesLast3Months}");
+                    // log.LogInformation($"Device: {deviceId} ProductPrice is: {ProductPrice}");
+                    // log.LogInformation($"Device: {deviceId} ProductCost is: {ProductCost}");
+                    // log.LogInformation($"Device: {deviceId} ProductSalesOffPercents is: {ProductSalesOffPercents}");
+                    // log.LogInformation($"Device: {deviceId} ProductRevenuePerItem is: {ProductRevenuePerItem}");
+                    // log.LogInformation($"Device: {deviceId} ProductProfitLastDay is: {ProductProfitLastDay}");
+                    // log.LogInformation($"Device: {deviceId} ProductProfitLastMonth is: {ProductProfitLastMonth}");
+                    // log.LogInformation($"Device: {deviceId} ProductProfitLast3Months is: {ProductProfitLast3Months}");
+                    // log.LogInformation($"Device: {deviceId} ProductRevenueLastDay is: {ProductRevenueLastDay}");
+                    // log.LogInformation($"Device: {deviceId} ProductRevenueLastMonth is: {ProductRevenueLastMonth}");
+                    // log.LogInformation($"Device: {deviceId} ProductRevenueLast3Months is: {ProductRevenueLast3Months}");
+                    // log.LogInformation($"Device: {deviceId} ProductImageURL is: {ProductImageURL}");
                     log.LogInformation($"Device: {deviceId} ShelfRank is: {ShelfRank}");
-                    log.LogInformation($"Device: {deviceId} CustomerQuantityLastHour is: {CustomerQuantityLastHour}");
-                    log.LogInformation($"Device: {deviceId} CustomerQuantityLastDay is: {CustomerQuantityLastDay}");
-                    log.LogInformation($"Device: {deviceId} CustomerQuantityLast3Months is: {CustomerQuantityLast3Months}");
-                    log.LogInformation($"Device: {deviceId} ShelfProductNames is: {ShelfProductNames}");
-                    log.LogInformation($"Device: {deviceId} ShelfItemQuantity is: {ShelfItemQuantity}");
-                    log.LogInformation($"Device: {deviceId} ShelfRevenueLastHour is: {ShelfRevenueLastHour}");
-                    log.LogInformation($"Device: {deviceId} ShelfRevenueLastDay is: {ShelfRevenueLastDay}");
-                    log.LogInformation($"Device: {deviceId} ShelfRevenueLast3Months is: {ShelfRevenueLast3Months}");
-                    log.LogInformation($"Device: {deviceId} ShelfSoldItemQuantityLastHour is: {ShelfSoldItemQuantityLastHour}");
-                    log.LogInformation($"Device: {deviceId} ShelfSoldItemQuantityLastDay is: {ShelfSoldItemQuantityLastDay}");
-                    log.LogInformation($"Device: {deviceId} ShelfSoldItemQuantityLast3Months is: {ShelfSoldItemQuantityLast3Months}");
-                    log.LogInformation($"Device: {deviceId} ShelfCostPerItem is: {ShelfCostPerItem}");
-                    log.LogInformation($"Device: {deviceId} ShelfPricePerItem is: {ShelfPricePerItem}");
-                    log.LogInformation($"Device: {deviceId} ConversionRateLastHour is: {ConversionRateLastHour}");
-                    log.LogInformation($"Device: {deviceId} ConversionRateLastDay is: {ConversionRateLastDay}");
-                    log.LogInformation($"Device: {deviceId} ConversionRateLast3Months is: {ConversionRateLast3Months}");
-                    log.LogInformation($"Device: {deviceId} ShelfProfitLastHour is: {ShelfProfitLastHour}");
-                    log.LogInformation($"Device: {deviceId} ShelfProfitLastDay is: {ShelfProfitLastDay}");
-                    log.LogInformation($"Device: {deviceId} ShelfProfitLast3Months is: {ShelfProfitLast3Months}");
+                    // log.LogInformation($"Device: {deviceId} ShelfCustomerQuantityLastDay is: {ShelfCustomerQuantityLastDay}");
+                    // log.LogInformation($"Device: {deviceId} ShelfCustomerQuantityLastMonth is: {ShelfCustomerQuantityLastMonth}");
+                    // log.LogInformation($"Device: {deviceId} ShelfCustomerQuantityLast3Months is: {ShelfCustomerQuantityLast3Months}");
+                    // log.LogInformation($"Device: {deviceId} ShelfProductNames is: {ShelfProductNames}");
+                    // log.LogInformation($"Device: {deviceId} ShelfItemQuantity is: {ShelfItemQuantity}");
+                    // log.LogInformation($"Device: {deviceId} ShelfSalesLastDay is: {ShelfSalesLastDay}");
+                    // log.LogInformation($"Device: {deviceId} ShelfSalesLastMonth is: {ShelfSalesLastMonth}");
+                    // log.LogInformation($"Device: {deviceId} ShelfSalesLast3Months is: {ShelfSalesLast3Months}");
+                    // log.LogInformation($"Device: {deviceId} ConversionRateLastDay is: {ConversionRateLastDay}");
+                    // log.LogInformation($"Device: {deviceId} ConversionRateLastMonth is: {ConversionRateLastMonth}");
+                    // log.LogInformation($"Device: {deviceId} ConversionRateLast3Months is: {ConversionRateLast3Months}");
+                    // log.LogInformation($"Device: {deviceId} ShelfProfitLastDay is: {ShelfProfitLastDay}");
+                    // log.LogInformation($"Device: {deviceId} ShelfProfitLastMonth is: {ShelfProfitLastMonth}");
+                    // log.LogInformation($"Device: {deviceId} ShelfProfitLast3Months is: {ShelfProfitLast3Months}");
+                    // log.LogInformation($"Device: {deviceId} ShelfRevenueLastDay is: {ShelfRevenueLastDay}");
+                    // log.LogInformation($"Device: {deviceId} ShelfRevenueLastMonth is: {ShelfRevenueLastMonth}");
+                    // log.LogInformation($"Device: {deviceId} ShelfRevenueLast3Months is: {ShelfRevenueLast3Months}");
+                    log.LogInformation($"Device: {deviceId} StoreSalesLastDay is: {StoreSalesLastDay}");
+                    log.LogInformation($"Device: {deviceId} StoreSalesLastMonth is: {StoreSalesLastMonth}");
+                    log.LogInformation($"Device: {deviceId} StoreSalesLast3Months is: {StoreSalesLast3Months}");
+                    log.LogInformation($"Device: {deviceId} StoreProfitLastDay is: {StoreProfitLastDay}");
+                    log.LogInformation($"Device: {deviceId} StoreProfitLastMonth is: {StoreProfitLastMonth}");
+                    log.LogInformation($"Device: {deviceId} StoreProfitLast3Months is: {StoreProfitLast3Months}");
+                    log.LogInformation($"Device: {deviceId} StoreRevenueLastDay is: {StoreRevenueLastDay}");
+                    log.LogInformation($"Device: {deviceId} StoreRevenueLastMonth is: {StoreRevenueLastMonth}");
+                    log.LogInformation($"Device: {deviceId} StoreRevenueLast3Months is: {StoreRevenueLast3Months}");
+
                     var updateProperty = new JsonPatchDocument();
                     var turbineTelemetry = new Dictionary<string, Object>()
                     {
@@ -125,38 +148,49 @@ namespace My.Function
                         ["ShelfId"] = ShelfId,
                         ["ProductId"] = ProductId,
                         ["ProductName"] = ProductName,
-                        ["ShelfContainProductNames"] = ShelfContainProductNames,
+                        ["ProductOnShelfName"] = ProductOnShelfName,
                         ["ProductSellingRank"] = ProductSellingRank,
-                        ["SoldProductQuantityLastHour"] = SoldProductQuantityLastHour,
-                        ["SoldProductQuantityLastDay"] = SoldProductQuantityLastDay,
-                        ["SoldProductQuantityLast3Months"] = SoldProductQuantityLast3Months,
-                        ["RemainProductQuantity"] = RemainProductQuantity,
+                        ["ProductSalesLastDay"] = ProductSalesLastDay,
+                        ["ProductSalesLastMonth"] = ProductSalesLastMonth,
+                        ["ProductSalesLast3Months"] = ProductSalesLast3Months,
                         ["ProductPrice"] = ProductPrice,
                         ["ProductCost"] = ProductCost,
-                        ["ProductDiscount"] = ProductDiscount,
-                        ["ProductProfitPerItem"] = ProductProfitPerItem,
-                        ["ProductProfitPercentagePerItem"] = ProductProfitPercentagePerItem,
+                        ["ProductSalesOffPercents"] = ProductSalesOffPercents,
+                        ["ProductRevenuePerItem"] = ProductRevenuePerItem,
+                        ["ProductProfitLastDay"] = ProductProfitLastDay,
+                        ["ProductProfitLastMonth"] = ProductProfitLastMonth,
+                        ["ProductProfitLast3Months"] = ShelfRank,
+                        ["ProductRevenueLastDay"] = ProductRevenueLastDay,
+                        ["ProductRevenueLastMonth"] = ProductRevenueLastMonth,
+                        ["ProductRevenueLast3Months"] = ProductRevenueLast3Months,
                         ["ProductImageURL"] = ProductImageURL,
                         ["ShelfRank"] = ShelfRank,
-                        ["CustomerQuantityLastHour"] = CustomerQuantityLastHour,
-                        ["CustomerQuantityLastDay"] = CustomerQuantityLastDay,
-                        ["CustomerQuantityLast3Months"] = CustomerQuantityLast3Months,
+                        ["ShelfCustomerQuantityLastDay"] = ShelfCustomerQuantityLastDay,
+                        ["ShelfCustomerQuantityLastMonth"] = ShelfCustomerQuantityLastMonth,
+                        ["ShelfCustomerQuantityLast3Months"] = ShelfCustomerQuantityLast3Months,
                         ["ShelfProductNames"] = ShelfProductNames,
                         ["ShelfItemQuantity"] = ShelfItemQuantity,
-                        ["ShelfRevenueLastHour"] = ShelfRevenueLastHour,
-                        ["ShelfRevenueLastDay"] = ShelfRevenueLastDay,
-                        ["ShelfRevenueLast3Months"] = ShelfRevenueLast3Months,
-                        ["ShelfSoldItemQuantityLastHour"] = ShelfSoldItemQuantityLastHour,
-                        ["ShelfSoldItemQuantityLastDay"] = ShelfSoldItemQuantityLastDay,
-                        ["ShelfSoldItemQuantityLast3Months"] = ShelfSoldItemQuantityLast3Months,
-                        ["ShelfCostPerItem"] = ShelfCostPerItem,
-                        ["ShelfPricePerItem"] = ShelfPricePerItem,
-                        ["ConversionRateLastHour"] = ConversionRateLastHour,
+                        ["ShelfSalesLastDay"] = ShelfSalesLastDay,
+                        ["ShelfSalesLastMonth"] = ShelfSalesLastMonth,
+                        ["ShelfSalesLast3Months"] = ShelfSalesLast3Months,
                         ["ConversionRateLastDay"] = ConversionRateLastDay,
+                        ["ConversionRateLastMonth"] = ConversionRateLastMonth,
                         ["ConversionRateLast3Months"] = ConversionRateLast3Months,
-                        ["ShelfProfitLastHour"] = ShelfProfitLastHour,
                         ["ShelfProfitLastDay"] = ShelfProfitLastDay,
-                        ["ShelfProfitLast3Months"] = ShelfProfitLast3Months
+                        ["ShelfProfitLastMonth"] = ShelfProfitLastMonth,
+                        ["ShelfProfitLast3Months"] = ShelfProfitLast3Months,
+                        ["ShelfRevenueLastDay"] = ShelfRevenueLastDay,
+                        ["ShelfRevenueLastMonth"] = ShelfRevenueLastMonth,
+                        ["ShelfRevenueLast3Months"] = ShelfRevenueLast3Months,
+                        ["StoreSalesLastDay"] = StoreSalesLastDay,
+                        ["StoreSalesLastMonth"] = StoreSalesLastMonth,
+                        ["StoreSalesLast3Months"] = StoreSalesLast3Months,
+                        ["StoreProfitLastDay"] = StoreProfitLastDay,
+                        ["StoreProfitLastMonth"] = StoreProfitLastMonth,
+                        ["StoreProfitLast3Months"] = StoreProfitLast3Months,
+                        ["StoreRevenueLastDay"] = StoreRevenueLastDay,
+                        ["StoreRevenueLastMonth"] = StoreRevenueLastMonth,
+                        ["StoreRevenueLast3Months"] = StoreRevenueLast3Months,
                     };
                     updateProperty.AppendAdd("/storeid", ID.Value<string>());
 
