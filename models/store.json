@@ -36,6 +36,11 @@
     },
     {
       "@type": "Telemetry",
+      "name": "ProductCategory",
+      "schema": "string"
+    },
+    {
+      "@type": "Telemetry",
       "name": "ProductOnShelfName",
       "schema": "string"
     },

@@ -20,6 +20,7 @@ namespace SignalRFunctions
         public static int ShelfId;
         public static int ProductId;
         public static string ProductName;
+        public static string ProductCategory;
         public static string ProductOnShelfName;
         public static int ProductSellingRank;
         public static int ProductSalesLastDay;

@@ -47,6 +47,7 @@ namespace My.Function
                     var ShelfId = deviceMessage["body"]["ShelfId"];
                     var ProductId = deviceMessage["body"]["ProductId"];
                     var ProductName = deviceMessage["body"]["ProductName"];
+                    var ProductCategory = deviceMessage["body"]["ProductCategory"];
                     var ProductOnShelfName = deviceMessage["body"]["ProductOnShelfName"];
                     var ProductSellingRank = deviceMessage["body"]["ProductSellingRank"];
                     var ProductSalesLastDay = deviceMessage["body"]["ProductSalesLastDay"];
@@ -96,6 +97,7 @@ namespace My.Function
                     log.LogInformation($"Device:{deviceId} ShelfId is: {ShelfId}");
                     log.LogInformation($"Device:{deviceId} ProductId is: {ProductId}");
                     log.LogInformation($"Device: {deviceId} ProductName is: {ProductName}");
+                    log.LogInformation($"Device: {deviceId} ProductCategory is: {ProductCategory}");
                     // log.LogInformation($"Device: {deviceId} ProductOnShelfName is: {ProductOnShelfName}");
                     // log.LogInformation($"Device: {deviceId} ProductSellingRank is: {ProductSellingRank}");
                     // log.LogInformation($"Device: {deviceId} ProductSalesLastDay: {ProductSalesLastDay}");
@@ -148,6 +150,7 @@ namespace My.Function
                         ["ShelfId"] = ShelfId,
                         ["ProductId"] = ProductId,
                         ["ProductName"] = ProductName,
+                        ["ProductCategory"] = ProductCategory,
                         ["ProductOnShelfName"] = ProductOnShelfName,
                         ["ProductSellingRank"] = ProductSellingRank,
                         ["ProductSalesLastDay"] = ProductSalesLastDay,
