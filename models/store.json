@@ -86,21 +86,6 @@
     },
     {
       "@type": "Telemetry",
-      "name": "ProductProfitLastDay",
-      "schema": "float"
-    },
-    {
-      "@type": "Telemetry",
-      "name": "ProductProfitLastMonth",
-      "schema": "float"
-    },
-    {
-      "@type": "Telemetry",
-      "name": "ProductProfitLast3Months",
-      "schema": "float"
-    },
-    {
-      "@type": "Telemetry",
       "name": "ProductRevenueLastDay",
       "schema": "float"
     },
@@ -112,6 +97,21 @@
     {
       "@type": "Telemetry",
       "name": "ProductRevenueLast3Months",
+      "schema": "float"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "ProductProfitLastDay",
+      "schema": "float"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "ProductProfitLastMonth",
+      "schema": "float"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "ProductProfitLast3Months",
       "schema": "float"
     },
     {
@@ -181,21 +181,6 @@
     },
     {
       "@type": "Telemetry",
-      "name": "ShelfProfitLastDay",
-      "schema": "float"
-    },
-    {
-      "@type": "Telemetry",
-      "name": "ShelfProfitLastMonth",
-      "schema": "float"
-    },
-    {
-      "@type": "Telemetry",
-      "name": "ShelfProfitLast3Months",
-      "schema": "float"
-    },
-    {
-      "@type": "Telemetry",
       "name": "ShelfRevenueLastDay",
       "schema": "float"
     },
@@ -207,6 +192,21 @@
     {
       "@type": "Telemetry",
       "name": "ShelfRevenueLast3Months",
+      "schema": "float"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "ShelfProfitLastDay",
+      "schema": "float"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "ShelfProfitLastMonth",
+      "schema": "float"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "ShelfProfitLast3Months",
       "schema": "float"
     },
     {
@@ -226,21 +226,6 @@
     },
     {
       "@type": "Telemetry",
-      "name": "StoreProfitLastDay",
-      "schema": "float"
-    },
-    {
-      "@type": "Telemetry",
-      "name": "StoreProfitLastMonth",
-      "schema": "float"
-    },
-    {
-      "@type": "Telemetry",
-      "name": "StoreProfitLast3Months",
-      "schema": "float"
-    },
-    {
-      "@type": "Telemetry",
       "name": "StoreRevenueLastDay",
       "schema": "float"
     },
@@ -252,6 +237,21 @@
     {
       "@type": "Telemetry",
       "name": "StoreRevenueLast3Months",
+      "schema": "float"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "StoreProfitLastDay",
+      "schema": "float"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "StoreProfitLastMonth",
+      "schema": "float"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "StoreProfitLast3Months",
       "schema": "float"
     }
   ]

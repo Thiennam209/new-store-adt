@@ -30,12 +30,12 @@ namespace SignalRFunctions
         public static float ProductCost;
         public static float ProductSalesOffPercents;
         public static float ProductRevenuePerItem;
-        public static float ProductProfitLastDay;
-        public static float ProductProfitLastMonth;
-        public static float ProductProfitLast3Months;
         public static float ProductRevenueLastDay;
         public static float ProductRevenueLastMonth;
         public static float ProductRevenueLast3Months;
+        public static float ProductProfitLastDay;
+        public static float ProductProfitLastMonth;
+        public static float ProductProfitLast3Months;
         public static string ProductImageURL;
         public static int ShelfRank;
         public static int ShelfCustomerQuantityLastDay;
@@ -49,21 +49,22 @@ namespace SignalRFunctions
         public static float ConversionRateLastDay;
         public static float ConversionRateLastMonth;
         public static float ConversionRateLast3Months;
-        public static float ShelfProfitLastDay;
-        public static float ShelfProfitLastMonth;
-        public static float ShelfProfitLast3Months;
         public static float ShelfRevenueLastDay;
         public static float ShelfRevenueLastMonth;
         public static float ShelfRevenueLast3Months;
+        public static float ShelfProfitLastDay;
+        public static float ShelfProfitLastMonth;
+        public static float ShelfProfitLast3Months;
         public static int StoreSalesLastDay;
         public static int StoreSalesLastMonth;
         public static int StoreSalesLast3Months;
-        public static float StoreProfitLastDay;
-        public static float StoreProfitLastMonth;
-        public static float StoreProfitLast3Months;
         public static float StoreRevenueLastDay;
         public static float StoreRevenueLastMonth;
         public static float StoreRevenueLast3Months;
+        public static float StoreProfitLastDay;
+        public static float StoreProfitLastMonth;
+        public static float StoreProfitLast3Months;
+
 
         [FunctionName("negotiate")]
         public static SignalRConnectionInfo GetSignalRInfo(
