@@ -81,7 +81,12 @@
     },
     {
       "@type": "Telemetry",
-      "name": "ProductRevenuePerItem",
+      "name": "ProductMarketingCost",
+      "schema": "float"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "ProductProfitPerItem",
       "schema": "float"
     },
     {

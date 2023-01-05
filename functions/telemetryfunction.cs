@@ -56,7 +56,8 @@ namespace My.Function
                     var ProductPrice = deviceMessage["body"]["ProductPrice"];
                     var ProductCost = deviceMessage["body"]["ProductCost"];
                     var ProductSalesOffPercents = deviceMessage["body"]["ProductSalesOffPercents"];
-                    var ProductRevenuePerItem = deviceMessage["body"]["ProductRevenuePerItem"];
+                    var ProductMarketingCost = deviceMessage["body"]["ProductMarketingCost"];
+                    var ProductProfitPerItem = deviceMessage["body"]["ProductProfitPerItem"];
                     var ProductRevenueLastDay = deviceMessage["body"]["ProductRevenueLastDay"];
                     var ProductRevenueLastMonth = deviceMessage["body"]["ProductRevenueLastMonth"];
                     var ProductRevenueLast3Months = deviceMessage["body"]["ProductRevenueLast3Months"];
@@ -106,7 +107,8 @@ namespace My.Function
                     // log.LogInformation($"Device: {deviceId} ProductPrice is: {ProductPrice}");
                     // log.LogInformation($"Device: {deviceId} ProductCost is: {ProductCost}");
                     // log.LogInformation($"Device: {deviceId} ProductSalesOffPercents is: {ProductSalesOffPercents}");
-                    // log.LogInformation($"Device: {deviceId} ProductRevenuePerItem is: {ProductRevenuePerItem}");
+                    // log.LogInformation($"Device: {deviceId} ProductMarketingCost is: {ProductMarketingCost}");
+                    // log.LogInformation($"Device: {deviceId} ProductProfitPerItem is: {ProductProfitPerItem}");
                     // log.LogInformation($"Device: {deviceId} ProductRevenueLastDay is: {ProductRevenueLastDay}");
                     // log.LogInformation($"Device: {deviceId} ProductRevenueLastMonth is: {ProductRevenueLastMonth}");
                     // log.LogInformation($"Device: {deviceId} ProductRevenueLast3Months is: {ProductRevenueLast3Months}");
@@ -159,7 +161,8 @@ namespace My.Function
                         ["ProductPrice"] = ProductPrice,
                         ["ProductCost"] = ProductCost,
                         ["ProductSalesOffPercents"] = ProductSalesOffPercents,
-                        ["ProductRevenuePerItem"] = ProductRevenuePerItem,
+                        ["ProductMarketingCost"] = ProductMarketingCost,
+                        ["ProductProfitPerItem"] = ProductProfitPerItem,
                         ["ProductRevenueLastDay"] = ProductRevenueLastDay,
                         ["ProductRevenueLastMonth"] = ProductRevenueLastMonth,
                         ["ProductRevenueLast3Months"] = ProductRevenueLast3Months,

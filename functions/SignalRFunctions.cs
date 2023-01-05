@@ -29,7 +29,8 @@ namespace SignalRFunctions
         public static float ProductPrice;
         public static float ProductCost;
         public static float ProductSalesOffPercents;
-        public static float ProductRevenuePerItem;
+        public static float ProductMarketingCost;
+        public static float ProductProfitPerItem;
         public static float ProductRevenueLastDay;
         public static float ProductRevenueLastMonth;
         public static float ProductRevenueLast3Months;
