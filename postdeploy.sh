@@ -32,7 +32,7 @@ git clone https://github.com/Thiennam209/new-store-adt
 storeid=$(az dt model create -n $adtname --models ./new-store-adt/models/store.json --query [].id -o tsv)
 
 # echo 'instantiate ADT Instances'
-for i in {1..24}
+for i in {1..48}
 do
     echo "Create Turbine storeid$i"
     az dt twin create -n $adtname --dtmi $storeid --twin-id "storeid$i"
